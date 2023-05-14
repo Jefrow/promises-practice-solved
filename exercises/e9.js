@@ -70,18 +70,18 @@ export function onReject(arg) {
 
 // Your code goes here...
 export const promise = Promise.resolve(1)
-  .then((id) => iterate(id))
-  .then((id) => iterate(id))
-  .then((id) => iterate(id))
-  .then((id) => iterate(id))
-  .then((id) => iterate(id))
-  .then((error) => alwaysThrows(error))
-  .then((id) => iterate(id))
-  .then((id) => iterate(id))
-  .then((id) => iterate(id))
-  .then((id) => iterate(id))
-  .then((id) => iterate(id))
-  .catch((error) => console.log(error))
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(alwaysThrows)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .then(iterate)
+  .catch(onReject)
 
 
 

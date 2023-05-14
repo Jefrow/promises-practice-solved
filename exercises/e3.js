@@ -42,14 +42,11 @@ export const getPromise = (num) => {
 export const  updateSumValue = () => {
   // Your code goes here...
   let sum = 2 ; 
-
-  let promise = getPromise(120)
-  
+  let promise = getPromise(120) 
   promise.then((value) => {
     sum = value + sum
   })
-
-  return (sum += 8)
+  return sum += 8
 }
 
 

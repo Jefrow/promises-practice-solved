@@ -22,8 +22,8 @@ export const getPromise = new Promise((resolve) => {
 })
 
 getPromise.then(
-  (onFulfilled) => {
-    console.log(onFulfilled);
+  (res) => {
+    console.log(res);
   }
 )
 

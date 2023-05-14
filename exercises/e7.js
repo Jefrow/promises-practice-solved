@@ -61,7 +61,7 @@ export const handlePromise = (promise) => {
   return promise
     .then((value) => value)
     .catch((reason) => {
-      if(reason.hasOwnProperty('message')){
+      if(reason.hasOwnProperty('message')) {
         onReject(reason)
       } else {
         return reason; 

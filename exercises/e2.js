@@ -38,10 +38,10 @@ export const getPromise = (boolean) => {
 export const handlePromise = (promise) => {
   // Your code goes here...
   return promise.then(
-    (onFulfilled) => {
-      return onFulfilled
+    (data) => {
+      return data
     },
-    (onRejected) => {
+    (reason) => {
       return 'Uh Oh'
     }
   )
