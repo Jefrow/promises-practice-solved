@@ -13,7 +13,7 @@
  * * set the usersUrl constant to store the json-server 'users' endpoint path
 */
 
-const fetch = require('node-fetch'); 
+import fetch from 'node-fetch'; 
 export const usersUrl = 'http://localhost:3000/users/';
 
 /**
@@ -41,7 +41,7 @@ const getLoginList = (data) => {
 */
 
 // Your code goes here ...
-const getData = fetch(usersUrl);
+const getData = fetch(usersUrl).then((res) => res.json());
 
 /**
  * @task 

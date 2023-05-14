@@ -24,7 +24,11 @@ export const result1 = Promise.any(promiseArr).catch((err) => console.log(err)) 
  * Use a correct PROMISE shortcut that will log and return the resolved value of promise3;
  */
 
-export const result2 = Promise.allSettled([promise3]).then((values) => console.log(values)); // Your code here
+export const result2 = Promise.allSettled([promise3])
+  .then((values) => {
+    console.log(values)
+    return values
+  }); // Your code here
 
 /**
  * @task
@@ -32,8 +36,14 @@ export const result2 = Promise.allSettled([promise3]).then((values) => console.l
  */
 
 export const result3 = Promise.all(promiseArr)
-  .then((value) => console.log(value))
-  .catch((reason) => console.log(reason));
+  .then((result) => {
+    console.log(result)
+    return result
+  })
+  .catch((reason) => {
+    console.log(reason)
+    return reason 
+  });
 
    // Your code here
 
