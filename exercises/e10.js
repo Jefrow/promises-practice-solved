@@ -17,25 +17,39 @@ const promiseArr = [promise1, promise2, promise3, promise4];
  * when promiseArr was passed as the argument
  */
 
-export const result1 = Promise.any(promiseArr).catch((err) => console.log(err)) // Your code here
+export const result1 = Promise.all(promiseArr)
+  .then((result) => {
+    console.log(result)
+    return result
+  })
+  .catch((reason) => {
+    console.log(reason)
+    return reason 
+  });
+// Your code here
 
 /**
  * @task
  * Use a correct PROMISE shortcut that will log and return the resolved value of promise3;
  */
 
-export const result2 = Promise.allSettled([promise3])
-  .then((values) => {
-    console.log(values)
-    return values
-  }); // Your code here
+export const result2 = Promise.any(promiseArr)
+  .then((result) => {
+  console.log(result)
+    return result
+  })
+  .catch((reason) => {
+    console.log(reason)
+    return reason 
+  }); 
+  // Your code here
 
 /**
  * @task
  * Use a correct PROMISE shortcut that will log and return an array of all promises statuses and values/reasons;
  */
 
-export const result3 = Promise.all(promiseArr)
+export const result3 = Promise.allSettled(promiseArr)
   .then((result) => {
     console.log(result)
     return result

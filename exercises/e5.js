@@ -27,8 +27,8 @@ export const getPromise = () => {
   // Your code goes here...
 
     return Promise.resolve('MANHATTAN')
-    .then((id) => { //id should be 'MANHATTAN'
-      return attachTitle(id); // calling attachTitle and using 'MANHATTAN' as the argument returning 'DR. MANHATTAN'
+    .then((val) => { //id should be 'MANHATTAN'
+      return attachTitle(val); // calling attachTitle and using 'MANHATTAN' as the argument returning 'DR. MANHATTAN'
     })
     .then((message) => {
       console.log(message); //Output 'DR. MANHATTAN'

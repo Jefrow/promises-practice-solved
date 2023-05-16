@@ -16,7 +16,7 @@
 */ 
 export const getPromise = (num) => {
   // Your code goes here...
-  if(num % 1 == 0) {
+  if (num % 1 == 0) {
     return new Promise((res) => {
       res(num)
     })

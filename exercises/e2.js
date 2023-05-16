@@ -41,7 +41,7 @@ export const handlePromise = (promise) => {
     (data) => {
       return data
     },
-    (reason) => {
+    () => {
       return 'Uh Oh'
     }
   )

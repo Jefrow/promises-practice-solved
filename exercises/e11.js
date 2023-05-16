@@ -41,7 +41,7 @@ const getLoginList = (data) => {
 */
 
 // Your code goes here ...
-const getData = fetch(usersUrl).then((res) => res.json());
+const getData = fetch(usersUrl)
 
 /**
  * @task 
@@ -56,6 +56,7 @@ const getData = fetch(usersUrl).then((res) => res.json());
 
 // Your code goes here ...
 export const result = getData
+  .then((res) => res.json())
   .then((data) => { 
     const loginList = getLoginList(data);
     console.log(loginList); 

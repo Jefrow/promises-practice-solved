@@ -7,12 +7,16 @@
 
 // === RESOLVED PROMISE
 // Update the promiseResolved variable to use the shortcut syntax
-export const promiseResolved = Promise.resolve('The PROMISE was RESOLVED').then((value) => value)
+export const promiseResolved = Promise
+  .resolve('The PROMISE was RESOLVED')
+  .then((value) => value)
 
 
 // === REJECTED PROMISE
 // Update the promiseResolved variable to use the shortcut syntax
-export const promiseRejected = Promise.reject('The PROMISE was REJECTED').catch((reason) => reason) 
+export const promiseRejected = Promise
+  .reject('The PROMISE was REJECTED')
+  .catch((reason) => reason) 
 
 
 // === TEST YOURSELF ===

@@ -40,7 +40,7 @@ export function alwaysThrows() {
 export function onReject(arg) {
   // Your code goes here...
 
-  if(typeof arg === 'object' && arg.hasOwnProperty('message')) {
+  if (arg.message) {
     console.log(arg.message)
   } else {
     console.log(arg)
@@ -69,8 +69,7 @@ export function onReject(arg) {
  */
 
 // Your code goes here...
-export const promise = Promise.resolve(1)
-  .then(iterate)
+export const promise = Promise.resolve(iterate(1))
   .then(iterate)
   .then(iterate)
   .then(iterate)

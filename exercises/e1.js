@@ -22,8 +22,9 @@ export const getPromise = new Promise((resolve) => {
 })
 
 getPromise.then(
-  (res) => {
-    console.log(res);
+  (val) => {
+    console.log(val);
+    return val
   }
 )
 

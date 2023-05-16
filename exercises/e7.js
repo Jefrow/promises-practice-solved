@@ -23,8 +23,7 @@ export function parsePromised(json_string) {
   // Your code goes here...
   return new Promise((resolve, reject) => {
     try {
-      const jsonParse = JSON.parse(json_string);
-      resolve(jsonParse)
+      resolve(JSON.parse(json_string))
     } catch (error) {
       reject(error); 
     }
@@ -61,7 +60,7 @@ export const handlePromise = (promise) => {
   return promise
     .then((value) => value)
     .catch((reason) => {
-      if(reason.hasOwnProperty('message')) {
+      if (reason.message) {
         onReject(reason)
       } else {
         return reason; 
